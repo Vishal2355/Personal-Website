@@ -9,8 +9,10 @@
 <body>
   <!-- Top Nav -->
   <header class="site-header">
-    <button id="menuToggle" aria-label="Toggle menu">☰</button>
-    <nav id="mainNav" class="nav">
+    <button id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+    <!-- HIDE BY DEFAULT via inline style (beats any stylesheet cache) -->
+    <nav id="mainNav" class="nav" style="display:none;">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
@@ -22,7 +24,6 @@
     <h1>Vishal Patel</h1>
     <p>Rutgers University CS Graduate</p>
 
-    <!-- UPDATED: icon images for socials -->
     <div class="socials">
       <a href="mailto:vpatelru@gmail.com" aria-label="Email">
         <img src="images/gmail.png" alt="Gmail icon">
@@ -86,8 +87,6 @@
         <p>Python tool that monitors price changes and logs metrics for target items to find lowest prices.</p>
         <a class="link" href="https://github.com/Vishal2355" target="_blank" rel="noopener">View repo</a>
       </article>
-
-      <!-- REMOVED: Plane Game and Snake Game cards -->
     </div>
   </section>
 
@@ -98,6 +97,7 @@
     <p><a href="tel:+19088483764">(908) 848-3764</a></p>
   </section>
 
-  <script src="app.js"></script>
+  <!-- cache-bust to ensure the new JS runs -->
+  <script src="app.js?v=3"></script>
 </body>
 </html>
